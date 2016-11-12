@@ -1,5 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Certification>
-  <Database Server=".\DEV" Name="SRO_CERTIFICATION" User="sa" Password="123456" />
-  <!--<Security Blowfish="true" CRC="true" Handshake="true" />-->
-</Certification>
+﻿<?xml version="1.0"?>
+<CertificationConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- CERTIFICATION DATABASE -->
+  <CertificationConnectionString>Data Source=192.168.178.16;Initial Catalog=SRO_CERTIFICATION;User ID=sa;Password=123456</CertificationConnectionString>
+
+  <Billing IP="192.168.178.10" Port="8080">
+    <!-- Thanks to florian0 for his MiniBillingServer (https://github.com/florian0/MiniBillingServer) -->
+    <!-- ACCOUNT DATABASE -->
+    <ConnectionString>Data Source=192.168.178.16;Initial Catalog=SRO_VT_ACCOUNT;User ID=sa;Password=123456</ConnectionString>
+
+    <WhitelistHosts>
+      <string>localhost</string>
+    </WhitelistHosts>
+    <WhitelistIPs>
+      <string>127.0.0.1</string>
+      <string>192.168.178.16</string>
+    </WhitelistIPs>
+  </Billing>
+</CertificationConfig>

@@ -46,6 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Billing\Handlers\ServerStateHandler.cs" />
+    <Compile Include="Billing\Handlers\SilkConsumeHandler.cs" />
+    <Compile Include="Billing\Handlers\SilkDataCallHandler.cs" />
+    <Compile Include="Billing\Http\AccessDeniedException.cs" />
+    <Compile Include="Billing\Http\FilteredHttpHandler.cs" />
+    <Compile Include="Billing\Http\HttpException.cs" />
+    <Compile Include="Billing\Http\HttpHandler.cs" />
+    <Compile Include="Billing\Http\HttpServer.cs" />
+    <Compile Include="Billing\Model\SilkData.cs" />
+    <Compile Include="Billing\BillingManager.cs" />
     <Compile Include="ByteArrayExtensions.cs" />
     <Compile Include="Caller.cs" />
     <Compile Include="Certification\ICertificationEntry.cs" />
@@ -62,10 +72,7 @@
     <Compile Include="Certification\ServerMachine.cs" />
     <Compile Include="Certification\ServerUpdateType.cs" />
     <Compile Include="Certification\Shard.cs" />
-    <Compile Include="Config\BindingElement.cs" />
-    <Compile Include="Config\ConfigFile.cs" />
-    <Compile Include="Config\DatabaseElement.cs" />
-    <Compile Include="Config\SecurityElement.cs" />
+    <Compile Include="Billing\BillingConfig.cs" />
     <Compile Include="EnumExtensions.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="AsyncNetwork\AsyncBuffer.cs" />
@@ -110,6 +117,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

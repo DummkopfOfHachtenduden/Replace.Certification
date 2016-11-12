@@ -187,9 +187,6 @@ namespace Replace.Certification
             {
                 ack.WriteByte(1);
                 cert.WriteAcknowledge(ack);
-
-                //var buffer = ack.GetBytes();
-                //File.WriteAllBytes(@"D:\Development\debug.dat", buffer);
             }
             else
             {

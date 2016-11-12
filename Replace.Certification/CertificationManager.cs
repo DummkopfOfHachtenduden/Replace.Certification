@@ -77,7 +77,7 @@ namespace Replace.Certification
 
         public void Load(string certificationModuleName)
         {
-            _database.Open(_config.Database.ConnectionString);
+            _database.Open(_config.CertificationConnectionString);
 
             SqlDataReader reader;
 
